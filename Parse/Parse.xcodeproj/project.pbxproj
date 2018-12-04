@@ -8761,6 +8761,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 810154FE1BB382F800D7C7BD /* Parse-watchOS.xcconfig */;
 			buildSettings = {
+				SUPPORTED_PLATFORMS = "watchsimulator watchos";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -8769,6 +8770,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 810154FE1BB382F800D7C7BD /* Parse-watchOS.xcconfig */;
 			buildSettings = {
+				SUPPORTED_PLATFORMS = "watchsimulator watchos";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -8777,6 +8779,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 815F24171BD04D310054659F /* Parse-tvOS.xcconfig */;
 			buildSettings = {
+				SDKROOT = appletvos;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
 			};
 			name = Debug;
 		};
@@ -8784,6 +8788,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 815F24171BD04D310054659F /* Parse-tvOS.xcconfig */;
 			buildSettings = {
+				SDKROOT = appletvos;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
 			};
 			name = Release;
 		};
@@ -8827,6 +8833,7 @@
 				DEFINES_MODULE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -8840,6 +8847,7 @@
 				DEFINES_MODULE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -8848,6 +8856,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81C582DE1C3B0A40000063C6 /* Parse-iOS-Dynamic.xcconfig */;
 			buildSettings = {
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 			};
 			name = Debug;
 		};
@@ -8855,6 +8864,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81C582DE1C3B0A40000063C6 /* Parse-iOS-Dynamic.xcconfig */;
 			buildSettings = {
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 			};
 			name = Release;
 		};
@@ -8862,6 +8872,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81C582DF1C3B0A40000063C6 /* Parse-tvOS-Dynamic.xcconfig */;
 			buildSettings = {
+				SDKROOT = appletvos;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
 			};
 			name = Debug;
 		};
@@ -8869,6 +8881,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81C582DF1C3B0A40000063C6 /* Parse-tvOS-Dynamic.xcconfig */;
 			buildSettings = {
+				SDKROOT = appletvos;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
 			};
 			name = Release;
 		};
@@ -8876,6 +8890,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81C582E01C3B0A40000063C6 /* Parse-watchOS-Dynamic.xcconfig */;
 			buildSettings = {
+				SUPPORTED_PLATFORMS = "watchsimulator watchos";
 			};
 			name = Debug;
 		};
@@ -8883,6 +8898,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81C582E01C3B0A40000063C6 /* Parse-watchOS-Dynamic.xcconfig */;
 			buildSettings = {
+				SUPPORTED_PLATFORMS = "watchsimulator watchos";
 			};
 			name = Release;
 		};
