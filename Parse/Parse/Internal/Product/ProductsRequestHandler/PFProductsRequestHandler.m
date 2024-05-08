@@ -9,7 +9,7 @@
 
 #import "PFProductsRequestHandler.h"
 
-#if TARGET_OS_IOS || TARGET_OS_TV
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_VISION
 
 #if __has_include(<Bolts/BFTask.h>)
 #import <Bolts/BFTask.h>

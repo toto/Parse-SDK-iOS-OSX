@@ -38,7 +38,7 @@
 #import "PFInstallation.h"
 #endif
 
-#if TARGET_OS_IOS || TARGET_OS_TV
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_VISION
 #import "PFPurchaseController.h"
 #import "PFProduct.h"
 #endif
@@ -83,7 +83,7 @@ static NSString *const _ParseApplicationIdFileName = @"applicationId";
 #if !TARGET_OS_WATCH
 @synthesize pushManager = _pushManager;
 #endif
-#if TARGET_OS_IOS || TARGET_OS_TV
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_VISION
 @synthesize purchaseController = _purchaseController;
 #endif
 
@@ -409,7 +409,7 @@ static NSString *const _ParseApplicationIdFileName = @"applicationId";
     });
 }
 
-#if TARGET_OS_IOS || TARGET_OS_TV
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_VISION
 
 #pragma mark PurchaseController
 
@@ -461,7 +461,7 @@ static NSString *const _ParseApplicationIdFileName = @"applicationId";
 
 - (void)_migrateSandboxDataToApplicationGroupContainerIfNeeded {
     // There is no need to migrate anything on OSX, since we are using globally available folder.
-#if TARGET_OS_IOS || TARGET_OS_TV
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_VISION
     // Do nothing if there is no application group container or containing application is specified.
     if (!self.configuration.applicationGroupIdentifier || self.configuration.containingApplicationBundleIdentifier) {
         return;

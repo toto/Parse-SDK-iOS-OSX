@@ -290,7 +290,7 @@ static Class _pushInternalUtilClass = nil;
 #pragma mark - Handling Notifications
 ///--------------------------------------
 
-#if TARGET_OS_IOS || TARGET_OS_TV
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_VISION
 + (void)handlePush:(NSDictionary *)userInfo {
     UIApplication *application = [PFApplication currentApplication].systemApplication;
     if (application.applicationState != UIApplicationStateActive) {

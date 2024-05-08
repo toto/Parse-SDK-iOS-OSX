@@ -15,6 +15,8 @@ NSString *const kPFDeviceType = @"ios";
 NSString *const kPFDeviceType = @"osx";
 #elif TARGET_OS_TV
 NSString *const kPFDeviceType = @"tvos";
+#elif TARGET_OS_VISION
+NSString *const kPFDeviceType = @"visionos";
 #elif TARGET_OS_WATCH
 NSString *const kPFDeviceType = @"applewatch";
 #endif

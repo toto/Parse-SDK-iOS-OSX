@@ -31,7 +31,7 @@
 + (BFTask<NSNumber *> *)trackAppOpenedWithLaunchOptions:(nullable NSDictionary *)launchOptions {
 #if TARGET_OS_WATCH || TARGET_OS_TV
     NSDictionary *userInfo = nil;
-#elif TARGET_OS_IOS
+#elif TARGET_OS_IOS || TARGET_OS_VISION
     NSDictionary *userInfo = launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey];
 #elif PF_TARGET_OS_OSX
     NSDictionary *userInfo = launchOptions[NSApplicationLaunchUserNotificationKey];

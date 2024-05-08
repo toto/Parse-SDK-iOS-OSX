@@ -9,7 +9,7 @@
 
 #import "PFApplication.h"
 
-#if TARGET_OS_IOS || TARGET_OS_TV
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_VISION
 #import <UIKit/UIKit.h>
 #elif PF_TARGET_OS_OSX
 #import <AppKit/AppKit.h>
@@ -37,7 +37,7 @@
 - (id)init {
     self = [super init];
     if (self) {
-#if TARGET_OS_IOS || TARGET_OS_TV
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_VISION
         if (@available(iOS 1.0, tvOS 10.0, *)) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.systemApplication addObserver:self forKeyPath:@"applicationIconBadgeNumber" options:NSKeyValueObservingOptionNew context:nil];
@@ -68,7 +68,7 @@
 - (NSInteger)iconBadgeNumber {
 #if TARGET_OS_WATCH
     return 0;
-#elif TARGET_OS_IOS || TARGET_OS_TV
+#elif TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_VISION
     return _iconBadgeNumber;
 #elif PF_TARGET_OS_OSX
     // Make sure not to use `NSApp` here, because it doesn't work sometimes,
@@ -92,7 +92,7 @@
 
 - (void)setIconBadgeNumber:(NSInteger)iconBadgeNumber {
     if (self.iconBadgeNumber != iconBadgeNumber) {
-#if TARGET_OS_IOS || TARGET_OS_TV
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_VISION
         _iconBadgeNumber = iconBadgeNumber;
         dispatch_block_t block = ^{
             if (@available(iOS 1.0, tvOS 10.0, *)) {
@@ -110,7 +110,7 @@
     }
 }
 
-#if TARGET_OS_IOS || TARGET_OS_TV
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_VISION
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
     if ([keyPath isEqualToString:@"applicationIconBadgeNumber"] && change) {
         _iconBadgeNumber = [change[@"new"] integerValue];
@@ -128,7 +128,7 @@
 }
 
 - (void)dealloc {
-#if TARGET_OS_IOS || TARGET_OS_TV
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_VISION
     if (@available(iOS 1.0, tvOS 10.0, *)) {
         [self.systemApplication removeObserver:self forKeyPath:@"applicationIconBadgeNumber"];
     }

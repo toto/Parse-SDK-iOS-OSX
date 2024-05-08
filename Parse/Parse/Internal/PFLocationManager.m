@@ -110,7 +110,7 @@
         [self.locationManager requestAlwaysAuthorization];
     }
     [self.locationManager requestLocation];
-#elif TARGET_OS_TV
+#elif TARGET_OS_TV || TARGET_OS_VISION
     [self.locationManager requestWhenInUseAuthorization];
     [self.locationManager requestLocation];
 #elif TARGET_OS_IOS

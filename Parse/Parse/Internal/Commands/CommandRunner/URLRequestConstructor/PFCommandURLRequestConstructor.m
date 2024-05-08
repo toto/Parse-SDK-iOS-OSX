@@ -129,6 +129,8 @@
     NSString *versionPrefix = @"i";
 #elif PF_TARGET_OS_OSX
     NSString *versionPrefix = @"osx";
+#elif TARGET_OS_VISION
+    NSString *versionPrefix = @"vision";
 #elif TARGET_OS_TV
     NSString *versionPrefix = @"apple-tv";
 #elif TARGET_OS_WATCH
